@@ -1,0 +1,27 @@
+const initApp = () => {
+  const hamburgerBtn = document.getElementById('hamburger-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+    hamburgerBtn.classList.toggle('toggle-btn');
+  };
+
+  hamburgerBtn.addEventListener('click', toggleMenu);
+  mobileMenu.addEventListener('click', toggleMenu);
+};
+
+//we want to wait for all the content to load, so you are guaranteed to be able to select the buttons
+document.addEventListener('DOMContentLoaded', initApp);
+
+// const hamburgerBtn = document.getElementById('hamburger-button');
+// const mobileMenu = document.getElementById('mobile-menu');
+
+// const toggleMenu = () => {
+//   mobileMenu.classList.toggle('hidden');
+//   mobileMenu.classList.toggle('flex');
+// };
+
+// hamburgerBtn.addEventListener('click', toggleMenu);
+// mobileMenu.addEventListener('click', toggleMenu);

@@ -1004,6 +1004,10 @@ video {
   -webit-backface-visibility: hidden;
 }
 
+.\[-webkit-transform\:rotateY\(0deg\)\] {
+  -webkit-transform: rotateY(0deg);
+}
+
 .radial-blue {
   background: radial-gradient(lightyellow, skyblue);
 }

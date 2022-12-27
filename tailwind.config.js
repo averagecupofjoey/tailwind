@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       screens: {
         widescreen: { raw: '(min-aspect-ratio: 3/2)' },
-        tallscreen: { raw: '(min-aspect-ratio: 65/100)' },
+        tallscreen: { raw: '(max-aspect-ratio: 65/100)' },
       },
       opacity: {
         85: '.85',

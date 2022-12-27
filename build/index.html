@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
-<body class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
-<header class="bg-orange-600 text-white sticky top-0 z-10">
+<body class="min-h-screen bg-slate-200 dark:bg-black dark:text-white">
+<header class="bg-red-600 text-white sticky top-0 z-10">
   <section class="max-w-4xl mx-auto p-4 flex justify-between items-center">
     <h1 class="text-3xl font-medium">
       <a href="#hero">🐉 Dragon Depot</a>
@@ -42,26 +42,27 @@
 <main class="max-w-4xl mx-auto">
   <section id="hero" class="flex flex-col-reverse justify-center sm:flex-row px-6 items-center gap-8 py-6 mb-12 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
     <article class="sm:w-1/2">
-      <h2 class="max-w-md text-4xl font-bold text center sm:text-5xl sm:text-left text-slate-900 dark:text-white">From <a href="https://en.wikipedia.org/wiki/Charizard" target="_blank" rel="noreferrer"><span id="charizard" class="text-indigo-700 dark:text-red-700 hover:text-orange-600"> Charizards </span></a> to <a href="https://gameofthrones.fandom.com/wiki/Drogon" target="_blank" rel="noreferrer"><span id="drogon" class="text-red-700 dark:text-red-700 hover:text-orange-600"> Drogons</span></a>, we've got your <span id="dragon" class="text-orange-600">dragon</span>.</h2>
+      <h2 class="max-w-md text-4xl font-bold text center sm:text-5xl sm:text-left text-slate-900 dark:text-white">From <a href="https://en.wikipedia.org/wiki/Charizard" target="_blank" rel="noreferrer"><span id="charizard" class="text-red-700 hover:text-orange-600"> Charizards </span></a> to <a href="https://gameofthrones.fandom.com/wiki/Drogon" target="_blank" rel="noreferrer"><span id="drogon" class="text-red-700  hover:text-orange-600"> Drogons</span></a>, we've got your <span id="dragon" class="text-orange-600">dragon</span>.</h2>
       <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
-        Protect your castle or just keep them as a pet!
+        Great for protection, pets, and party favors!
       </p>
-      <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">Gotta Catch Em' All</p>
+      <!-- <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">Gotta Catch Em' All</p> -->
     </article>
     <img id="homeDragon" class="w-1/2" src="./img/dragonCage.png" alt="Rocket Dab">
   </section>
   <hr class="mx-auto bg-black dark:bg-white w-1/2">
-  <section id="dragons" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
+  <!-- <section id="dragons" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
     <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
       Our Dragons
     </h2>
         <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center gap-8">
           <li
             class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black">
-            <img src="./img/bluedragon.png" alt="Explorer" class="mb-6 w-1/2">
+            <img src="./img/bluedragon.png" alt="Explorer" class="mb-6 w-1/2" id="iceCard" data-current-side="front">
             <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Ice Dragon </h3>
             <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $ </p>
             <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> For the cool kids </h3>
+            <div class="flex-row items-center "><button id='iceClick' class="bg-slate-100 hover:bg-cyan-400 active:bg-teal-500 text-black p-1 w-12 mt-4 mb-0 rounded-xl border border-solid border-slate-900 dark:border-none">CLick</button> </div>
           </li>
           <li
             class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black">
@@ -80,6 +81,112 @@
         </ul>
   </section>
 
+
+    <hr class="mx-auto bg-black dark:bg-white w-1/2"> -->
+
+  <section id="dragons" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
+    <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">
+      Our Dragons
+    </h2>
+
+    <div class="group mx-auto my-12 flex flex-col sm:flex-row items-center gap-8 [perspective:1000px]">
+      <!-- <div class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+                    <img src="./img/reddragon.png" alt="Adventure" class="mb-6 w-1/2">
+                    <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+                    <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $$</p>
+                    <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> Our hottest breed</h3>>
+    </div> -->
+      <div class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+        <div class="[backface-visibility:hidden] flex flex-col items-center relative">
+          <img src="./img/reddragon.png" alt="Adventure" class="mb-6 w-1/2">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+          <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $</p>
+          <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> Our hottest breed</h3>
+        </div>
+        <div class="[backface-visibility:hidden] [transform:rotateY(180deg)] absolute">
+          <h3 class="text-3xl sm:text-xl md:text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+          <p class="mt-3 md:mt-2 lg:mt-8 px-4 sm:text-xs md:text-base">The fire dragon is the most aggressive breed of dragon. These dragons work well for protection. They prefer a warmer climate, and are not suitable for northern climates.</p>
+        </div>
+      </div>
+      <div class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+        <div class="[backface-visibility:hidden] flex flex-col items-center relative">
+          <img src="./img/bluedragon.png" alt="Adventure" class="mb-6 w-1/2">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Ice Dragon </h3>
+          <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $$</p>
+          <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> For the cool kids</h3>
+        </div>
+        <div class="[backface-visibility:hidden] [transform:rotateY(180deg)] absolute">
+          <h3 class="text-3xl sm:text-xl md:text-3xl text-center text-slate-900 dark:text-white"> Ice Dragon </h3>
+          <p class="mt-3 md:mt-2 lg:mt-8 px-4 sm:text-xs md:text-base">The ice dragon is an uncommon breed of dragon. Similar to fire dragons in temperment, but they prefer northern climates.</p>
+        </div>
+      </div>
+      <div class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+        <div class="[backface-visibility:hidden] flex flex-col items-center relative">
+          <img src="./img/golddragon.png" alt="Adventure" class="mb-6 w-1/2">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Gold Dragon </h3>
+          <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $$$</p>
+          <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> Fortune favors the bold</h3>
+        </div>
+        <div class="[backface-visibility:hidden] [transform:rotateY(180deg)] absolute">
+          <h3 class="text-3xl sm:text-xl md:text-3xl text-center text-slate-900 dark:text-white"> Gold Dragon </h3>
+          <p class="mt-3 md:mt-2 lg:mt-8 px-4 sm:text-xs md:text-base">A very rare breed of dragon that brings good luck to those skillful enough to tame it. This dragon thrives in any climate.</p>
+        </div>
+      </div>
+      <!-- <div class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+        <div class="[backface-visibility:hidden] flex flex-col items-center relative">
+          <img src="./img/reddragon.png" alt="Adventure" class="mb-6 w-1/2">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+          <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $$</p>
+          <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> Our hottest breed</h3>
+        </div>
+        <div class="[backface-visibility:hidden] [transform:rotateY(180deg)] absolute">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+          <p class="mt-8 px-4">The fire dragon is the most aggressive breed of dragon. These dragons work well for protection. They prefer a warmer climate, and are not suitable for northern climates.</p>
+        </div>
+    </div>
+      <div class="w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black transition-all duration-500 [transform-style:preserve-3d] hover:[transform:rotateY(180deg)]">
+        <div class="[backface-visibility:hidden] flex flex-col items-center relative">
+          <img src="./img/reddragon.png" alt="Adventure" class="mb-6 w-1/2">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+          <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $$</p>
+          <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> Our hottest breed</h3>
+        </div>
+        <div class="[backface-visibility:hidden] [transform:rotateY(180deg)] absolute">
+          <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Fire Dragon </h3>
+          <p class="mt-8 px-4">The fire dragon is the most aggressive breed of dragon. These dragons work well for protection. They prefer a warmer climate, and are not suitable for northern climates.</p>
+        </div>
+    </div> -->
+
+    <!-- </div> -->
+    <!-- <div id="cardContainer" class="flex justify-center items-center content-center">
+      <div class="cards flex justify-center">
+        <div class="singleCard w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black">
+          <div class="cardFront flex flex-col items-center">
+            <img src="./img/bluedragon.png" alt="Explorer" class="mb-6 w-1/2">
+            <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Ice Dragon </h3>
+            <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $ </p>
+            <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> For the cool kids </h3>
+          </div>
+          <div class="cardBack">
+            <p>This will be what is being flipped</p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div id="iceCard" class="flex justify-center">
+        <div class="front w-2/3 sm:w-5/6 flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-white py-6 px-2 rounded-3xl shadow-xl dark:bg-black">
+            <img src="./img/bluedragon.png" alt="Explorer" class="mb-6 w-1/2" id="iceCard" data-current-side="front">
+            <h3 class="text-3xl text-center text-slate-900 dark:text-white"> Ice Dragon </h3>
+            <p class="hidden sm:block text-3xl text-center text-slate-900 dark:text-slate-400 mt-2"> $ </p>
+            <p class="sm:hidden text-2xl text-center mt-2  text-slate-900 dark:text-slate-400"> For the cool kids </h3>
+            <div class="flex-row items-center "><button id='iceClick' class="bg-slate-100 hover:bg-cyan-400 active:bg-teal-500 text-black p-1 w-12 mt-4 mb-0 rounded-xl border border-solid border-slate-900 dark:border-none">CLick</button> </div>
+
+        </div>
+      </div> -->
+
+    <!-- </div> -->
+
+  </section>
     <hr class="mx-auto bg-black dark:bg-white w-1/2">
 
   <section id="testimonials" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
@@ -87,7 +194,7 @@
       Testimonials
     </h2>
     <figure class="my-12">
-      <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
+      <blockquote class="bg-yellow-400 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
         <p class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">Charizard was vital in my journey to becoming a Pokemon Master, and I never would have met him if it weren't for Dragon Depot.</p>
 
       </blockquote>
@@ -95,20 +202,20 @@
                 Pokemon Master</figcaption>
     </figure>
     <figure class="my-12">
-      <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
-        <p class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">Hey there, some sort of fake quote will eventually be here</p>
+      <blockquote class="bg-yellow-400 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
+        <p class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">My world hadn't seen a dragon in centuries until I visited Dragon Depot.</p>
 
       </blockquote>
-      <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">&#8212;Ash Ketchum,
-                Pokemon Master</figcaption>
+      <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">&#8212;Queen Daenerys,
+                Ruler of the Seven Kingdoms</figcaption>
     </figure>
     <figure class="my-12">
-      <blockquote class="bg-teal-600 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
-        <p class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">Hey there, some sort of fake quote will eventually be here</p>
+      <blockquote class="bg-yellow-400 dark:bg-black pl-14 pr-8 py-12 rounded-3xl relative ">
+        <p class="text-2xl sm:text-3xl text-left mt-2 text-white dark:text-slate-400 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-white before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-white after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">Nothing can withstand the phenomenal strength of my Blue Eyes White Dragon, which I purchased from Dragon Depot.</p>
 
       </blockquote>
-      <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">&#8212;Ash Ketchum,
-                Pokemon Master</figcaption>
+      <figcaption class="italic text-xl sm:text-2xl text-right mt-2 text-slate-500 dark:text-slate-400">&#8212;Seto Kaiba,
+                CEO, Kaiba Corporation</figcaption>
     </figure>
 
   </section>
@@ -124,23 +231,23 @@
       <label for="message">Message:</label>
       <textarea name="message" id="message" cols="30" rows="10" placeholder="SAY IT" required class="w-full text-black text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-900 dark:border-none"></textarea>
 
-      <button class="bg-cyan-600 hover:bg-cyan-400 active:bg-teal-500 text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none">Submit</button>
+      <button class="bg-red-600 hover:bg-red-500 active:bg-red-400 text-white p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none">Submit</button>
 
     </form>
   </section>
 </main>
 
-<footer id="footer" class="bg-cyan-600 text-white text-xl">
+<footer id="footer" class="bg-red-600 text-white text-xl">
   <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
     <address>
                       <h2>Dragon Depot Corp.</h2>
-                      555 Astro Way<br>
-                      Fairfield, New Jersey 12345-5555<br>
-                      Email: <a href="mailto:inquiries@dragondepot.com">Inquires@AcmeRockets.com</a><br>
-                      Phone: <a href="tel:+15555555555">(555) 555-5555</a>
+                      6000 Universal Blvd<br>
+                      Orlando, Florida 32819-8950<br>
+                      Email: <a href="mailto:inquiries@dragondepot.com">contact@dragondepot.com</a><br>
+                      Phone: <a href="tel:+15555555555">(123) 456-7890</a>
     </address>
     <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
-      <a href="#rockets" class="hover:opacity-80">Our Rockets</a>
+      <a href="#dragons" class="hover:opacity-80">Our Dragons</a>
       <a href="#testimonials" class="hover:opacity-80">Our Testimonials</a>
       <a href="#contact" class="hover:opacity-80">Contact Us</a>
     </nav>
